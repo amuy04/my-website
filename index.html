@@ -104,8 +104,7 @@
         <div class="section">
             <h2>About Me</h2>
             <div id="typing-effect"></div>
-            <p id="static-text">Hello! I'm Mini, a passionate student who came to South Korea last month on March 8,to get experience of K-culture as well as to continue my studies too.</p>
-            <p>I love reading novels, manhwa,manga or watching drama,anime,series and movie too.</p>
+            <p id="static-text">I love reading novels, manhwa, manga or watching drama, anime, series and movie too.</p>
         </div>
 
         <div class="section">
@@ -126,11 +125,17 @@
 
         <div class="section">
             <h2>Contact</h2>
-            <p>📧 Email: <a href="mailto:mimi@gmail.com">mimi@gmail.com</a></p>
+            <p>📧 Email: <a href="mailto:mimi@gmail.com" class="email-link">mimi@gmail.com</a></p>
             <p>📞 Phone: <a href="tel:+01012345678">010-1234-5678</a></p>
+            <div class="btn-container">
+                <button class="action-btn email-btn" id="emailBtn">Send Email</button>
+                <button class="action-btn" id="colorBtn">Change Background</button>
+            </div>
         </div>
     </div>
+
     <script>
+        
         const typingText = "Hello! I'm Mini, a passionate student who came to South Korea last month on March 8, to get experience of K-culture as well as to continue my studies too.";
         const typingElement = document.getElementById('typing-effect');
         let i = 0;
@@ -142,9 +147,13 @@
                 setTimeout(typeWriter, 30);
             }
         }
+        
+        
         document.getElementById('emailBtn').addEventListener('click', function() {
             window.location.href = 'mailto:mimi@gmail.com';
         });
+        
+        
         const colors = ['purple', 'lightpink', 'gray', 'skyblue', 'green'];
         let currentColor = 0;
         
